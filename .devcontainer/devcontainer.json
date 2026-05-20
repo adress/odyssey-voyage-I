@@ -1,0 +1,26 @@
+{
+  "name": "Odyssey Voyage I - FlyBy",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "forwardPorts": [3000, 4000, 4001, 4002],
+  "portsAttributes": {
+    "3000": { "label": "Client (React)" },
+    "4000": { "label": "Router" },
+    "4001": { "label": "Subgraph Locations" },
+    "4002": { "label": "Subgraph Reviews" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GraphQL.vscode-graphql",
+        "GraphQL.vscode-graphql-syntax",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  }
+}
